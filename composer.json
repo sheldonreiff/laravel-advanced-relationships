@@ -1,0 +1,44 @@
+{
+    "name": "sheldonreiff/laravel-advanced-relationships",
+    "description": "Multi-column and JSON relationships using awobaz/compoships and staudenmeir/eloquent-json-relations",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^7.2",
+        "awobaz/compoships": "^1.1",
+        "staudenmeir/eloquent-json-relations": "^1.2.3"
+    },
+    "require-dev": {
+        "jeroen-g/laravel-packager": "^2.4",
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [],
+            "providers": [
+                "Reiff\\AdvancedRelationships\\AdvancedRelationshipsServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Reiff\\AdvancedRelationships\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "@php vendor/phpunit/phpunit/phpunit"
+    }
+}
